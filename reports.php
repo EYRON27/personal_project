@@ -51,17 +51,25 @@ $result = $stmt->get_result();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Money Reports</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <title>MoneyTracker Reports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/reports.css">
 </head>
 <body>
 <div class="sidebar">
-    <h2>MoneyTracker</h2>
-    <a href="dashboard.php">🏠 Dashboard</a>
-    <a href="reports.php">📊 Reports</a>
-    <a href="#">⚙️ Settings</a>
-    <a href="index.php">🚪 Logout</a>
+    <div class="logo">
+        <h2>💰 MoneyTracker</h2>
+    </div>
+
+    <nav class="nav-links">
+        <a href="dashboard.php"><span>🏠</span> Dashboard</a>
+        <a href="reports.php"><span>📊</span> Reports</a>
+    </nav>
+
+    <a href="index.php" class="logout">Logout</a>
 </div>
+
 
 <div class="main">
     <header>

@@ -1,0 +1,87 @@
+/* sidebar.css */
+
+/* General Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f4f6f8;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #1e293b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar .logo {
+    margin-bottom: 40px;
+}
+
+.sidebar h2 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.sidebar p {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* Navigation Links */
+.nav-links {
+    flex: 1;
+}
+
+.nav-links a {
+    display: block;
+    padding: 12px 10px;
+    margin: 8px 0;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a span {
+    margin-right: 10px;
+}
+
+.nav-links a:hover {
+    background: #334155;
+}
+
+/* Logout Button */
+.logout {
+    display: block;
+    padding: 12px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    background: #ef4444;
+    text-align: center;
+    transition: background 0.3s;
+    font-weight: 600;
+}
+
+.logout span {
+    margin-right: 8px;
+}
+
+.logout:hover {
+    background: #dc2626;
+}
+
+

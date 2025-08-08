@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $user_id = $_SESSION['user_id'];
-$username = $_SESSION['username'] ?? 'User'; // Assuming you set this during login
+$username = $_SESSION['username'] ?? 'User';
 
 // Message handling
 $message = '';
@@ -33,21 +33,28 @@ $stmt2->bind_result($business_total);
 $stmt2->fetch();
 $stmt2->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>MoneyTracker Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <!-- Use Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link to CSS in styles folder -->
+    <link rel="stylesheet" href="styles/dashboard.css">
 </head>
-<body class="<?= isset($_COOKIE['night_mode']) && $_COOKIE['night_mode'] == '1' ? 'dark-mode' : '' ?>">
-    <div class="sidebar">
-        <h2>MoneyTracker</h2>
-        <p>Manage your funds</p>
-        <a href="#">🏠 Dashboard</a>
-        <a href="reports.php">📊 Reports</a>
-        <a href="index.php">🚪 Logout</a>
+<body>
+   <div class="sidebar">
+        <div class="logo">
+            <h2>💰 MoneyTracker</h2>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#"><span>🏠</span> Dashboard</a>
+            <a href="reports.php"><span>📊</span> Reports</a>
+        </nav>
+
+        <a href="index.php" class="logout">Logout</a>
     </div>
 
     <div class="main">
