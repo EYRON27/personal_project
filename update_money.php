@@ -19,9 +19,12 @@ if (!in_array($type, ['personal', 'business']) || !is_numeric($amount) || empty(
     exit();
 }
 
-// Insert into DB (you need to add `description` column if it's not there)
-$stmt = $conn->prepare("INSERT INTO money (user_id, type, amount, created_at) VALUES (?, ?, ?, NOW())");
-$stmt->bind_param("isd", $user_id, $type, $amount);
+$reason = $_POST['description'];
+
+$stmt = $conn->prepare("INSERT INTO money (user_id, type, amount, reason, created_at) VALUES (?, ?, ?, ?, NOW())");
+$stmt->bind_param("isds", $user_id, $type, $amount, $reason);
+
+
 if ($stmt->execute()) {
     $_SESSION['message'] = "Transaction recorded successfully.";
 } else {

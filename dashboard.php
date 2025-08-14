@@ -80,21 +80,23 @@ $stmt2->close();
                 <div class="message"><?= htmlspecialchars($message) ?></div>
             <?php endif; ?>
 
-            <form action="update_money.php" method="POST">
-                <label for="type">Type:</label>
-                <select name="type" required>
-                    <option value="personal">Personal</option>
-                    <option value="business">Business</option>
-                </select>
+                <form action="update_money.php" method="POST">
+                    <label for="type">Type:</label>
+                    <select name="type" required>
+                        <option value="business">Business</option>
+                        <option value="personal">Personal</option>
+                    
+                    </select>
 
-                <label for="amount">Amount (+ or -):</label>
-                <input type="number" step="0.01" name="amount" required>
+                    <label for="amount">Amount (+ or -):</label>
+                    <input type="number" step="0.01" name="amount" required placeholder="Enter Amount">
+                    
 
-                <label for="description">Description:</label>
-                <input type="text" name="description" maxlength="255" required placeholder="Enter reason...">
+                    <label for="description">Description:</label>
+                    <input type="text" name="description" maxlength="255" required placeholder="Enter reason...">
 
-                <button type="submit">Submit</button>
-            </form>
+                    <button type="submit">Submit</button>
+                </form>
         </div>
     </div>
 </body>

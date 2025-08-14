@@ -54,7 +54,7 @@
     <html>
     <head>
         <title>Login/Register</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
     <div class="container <?= ($action === 'register' && empty($errors) && $success) ? '' : (($action === 'register') ? 'right-panel-active' : '') ?>" id="container">
